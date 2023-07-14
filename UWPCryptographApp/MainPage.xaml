@@ -24,6 +24,8 @@
                               Label="Encrypt" Click="Encrypt_Click"/>
         <AppBarButton Icon="Document" Name="Decrypt"
                               Label="Decrypt" Click="Decrypt_Click"/>
+        <AppBarButton Icon="ProtectedDocument" Name="HashMessage"
+                              Label="Hash" Click="HashMessage_Click"/>
       </StackPanel>
     </AppBar>
   </Page.BottomAppBar>

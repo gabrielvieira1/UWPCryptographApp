@@ -23,6 +23,7 @@ namespace UWPCryptographApp
   public sealed partial class MainPage : Page
   {
     Library lib = new Library();
+    HashGenerator hasher = new HashGenerator();
     public MainPage()
     {
       this.InitializeComponent();
@@ -45,6 +46,10 @@ namespace UWPCryptographApp
     private void Decrypt_Click(object sender, RoutedEventArgs e)
     {
       lib.Decrypt(Display);
+    }
+    private void HashMessage_Click(object sender, RoutedEventArgs e)
+    {
+      hasher.HashMessage(Display);
     }
   }
 }
