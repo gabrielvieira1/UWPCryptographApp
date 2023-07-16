@@ -20,7 +20,8 @@ namespace UWPCryptographApp
       try
       {
         byte[] inputBytes = Encoding.UTF8.GetBytes(display.Text);
-        HashAlgorithmProvider hashAlgorithm = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Md5);
+        HashAlgorithmProvider hashAlgorithm = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Sha1);
+        //HashAlgorithmProvider hashAlgorithm = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Sha256);
         IBuffer hashedBuffer = hashAlgorithm.HashData(CryptographicBuffer.CreateFromByteArray(inputBytes));
         string base64Hash = CryptographicBuffer.EncodeToBase64String(hashedBuffer);
         display.Text = base64Hash;
